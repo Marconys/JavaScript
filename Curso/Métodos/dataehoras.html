@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e Horas</title>
+</head>
+<body>
+
+    <script>
+        var dt = new Date();
+        var diasem = dt.getDay();
+        var dia = dt.getDate();
+        var mes = dt.getMonth();
+        var ano = dt.getFullYear();
+
+        var horas = dt.getHours();
+        var minutos = dt.getMinutes();
+        var segundos = dt.getSeconds();
+
+        var meses = new Array("Janeiro", "fevereiro",  "Março" , "Abril" , "Maio", "Junho" , "Julho" , "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+        var semana = new Array("Domingo" , "Segunda-Feira", "Terça-feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+
+        document.write(semana[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano + "</br>");
+        document.write(horas + ":" + minutos +":" + segundos + "</br> </br>");
+
+        // Metodo setDate para alterar a data e hora
+
+        var dt = new Date(1991,11,07); // posso passar parametros no caso, o ano, mês e dia
+
+        dt.setDate(dt.getDate()+2)
+
+        var diasem = dt.getDay();
+        var dia = dt.getDate();
+        var mes = dt.getMonth();
+        var ano = dt.getFullYear();
+
+        var horas = dt.getHours();
+        var minutos = dt.getMinutes();
+        var segundos = dt.getSeconds();
+
+        var meses = new Array("Janeiro", "fevereiro",  "Março" , "Abril" , "Maio", "Junho" , "Julho" , "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+        var semana = new Array("Domingo" , "Segunda-Feira", "Terça-feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+
+        document.write(semana[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano + "</br>");
+        document.write(horas + ":" + minutos +":" + segundos);
+
+    </script>
+    
+</body>
+</html>
