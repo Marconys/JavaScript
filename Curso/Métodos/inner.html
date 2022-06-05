@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+<body>
+
+    <h2 id="titulo">innerHTML</h2>
+    <p id="subtitulo">Esaa propriedade permite através do método getElementById, obter e modificar o conteudo de uma tag</p>
+    
+    <h3 id="titulo2">Marconys Pinheiro de Moura</h3>
+    <p id="sub2">hoje é sexta-feira</p>
+
+    <script>
+        var titulo2 = document.getElementById("titulo2").innerHTML="MARCONYS P MOURA";
+
+        // alterando as propriedades css a aprtir da variável que receu o id como atributo
+        var titulo2 = document.getElementById("titulo2");
+        titulo2.style.color="#f00"
+
+        var sub2 = document.getElementById("sub2").innerHTML="Não, Hoje é sábado!";
+
+        
+
+
+    </script>
+    
+    <script>
+
+    </script>
+</body>
+</html>

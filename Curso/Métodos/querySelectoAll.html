@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll()</title>
+    <STyle>
+        .titulo {
+            color: #000;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        div {
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .div2 {
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        a {
+            display: block;
+        }
+    </STyle>
+</head>
+
+<body>
+    <h1 class="titulo">querySelectorAll</h1>
+    <p>O querySelectorAll() é um método que retorna os elementos do documento que correspondem auma classe de CSS ou uma
+        tag especifica.</p>
+    <h2 class="titulo">Curso de Javascript</h2>
+    <p>www.marconys.com.br</p>
+
+    <div>
+        <h3>Curso de Javascript</h3>
+        <p>Este texto esta dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+
+    <div class="div2">
+        <h3>Curso de Javascript</h3>
+        <p>Este texto esta dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+
+    <a href="www.marconys.com.br" target="_blank">CANAL</a>
+    <a href="www.marconyspinheirodemoura.com.br" target="_blank">Site</a>
+
+    <hr>
+
+    <script>
+        // Retornar o elemento selecionado conforme o sei indíce
+        var elementos = document.querySelectorAll("p");
+        document.write(elementos[0].innerHTML + "<br>");
+
+        // retornar todos os elentos da classe titulo
+        var elemento = document.querySelectorAll(".titulo");
+        for (var i = 0; i < elemento.length; i++) {
+            document.write(elemento[i].innerHTML + "<br>");
+        };
+
+        // Alterando as propriedades CSS de todoas as classes .titulo
+        var elemento = document.querySelectorAll(".titulo");
+        for (var i = 0; i < elemento.length; i++) {
+            elemento[i].style.color = "#00f";
+        };
+
+        // Retorna com todos as tag p da div
+        var div = document.querySelectorAll("div > p");
+        for (var i = 0; i < div.length; i++) {
+            div[i].style.color = "#0edf"
+
+        }
+
+        // retorna o seletor filho mesma função dos outros dois exemplos abaixo
+        var div = document.querySelectorAll("div > p");
+        for (var i = 0; i < div.length; i++) {
+            div[i].innerHTML = "hoje é sexta feira"
+        }
+        //retorna o seletor filho
+        var div2 = document.querySelectorAll(".div2 p");
+        for (var i = 0; i < div2.length; i++) {
+            div2[i].style.color = "#f00"
+            div2[i].style.fontSize = "20px"
+
+        }
+
+        //retorna o seletor filho
+        var div2 = document.querySelectorAll(".div2 h3");
+        for (var i = 0; i < div2.length; i++) {
+            div2[i].style.color = "#00f"
+            div2[i].style.fontSize = "20px"
+
+        }
+
+        // Retonar todos os elementos pasados por parametros
+        var all = document.querySelectorAll(".h1,h2,h3 ");
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.color = "#00f"
+            all[i].style.fontSize = "20px"
+
+        }
+
+
+    </script>
+</body>
+
+</html>

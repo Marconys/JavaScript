@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+<body>
+
+    <h1>getElementsByTagName</h1>
+    <p>este método retorna um conjunto de elementos html em forma de vetor</p>
+
+    <h2>marconys pinheiro</h2>
+    <p>este método retor... </p>
+
+    <script>
+        // retornando todos os elementos tag p
+     var tagsp = document.getElementsByTagName("p");
+     for(var i = 0; i < tagsp.length; i++){
+         tagsp[i].style.color="#00f"
+     }
+     // retorna todos os elementos filtrando-os com base no seu indíce de posição no vetor
+     var tag = document.getElementsByTagName("*");
+     tag[10].style.color="#f00"
+    </script>
+    
+</body>
+</html>
